@@ -1,0 +1,2221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7B41F7C-DD09-4162-A7F1-DFD59AF40295}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shop</RootNamespace>
+    <AssemblyName>Shop</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Json100r1\Bin\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Address.aspx" />
+    <Content Include="admin-add.aspx" />
+    <Content Include="assess.aspx" />
+    <Content Include="assets\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="assets\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="assets\bxslider\images\bx_loader.gif" />
+    <Content Include="assets\bxslider\images\controls.png" />
+    <Content Include="assets\bxslider\jquery.bxslider.css" />
+    <Content Include="assets\bxslider\jquery.bxslider.min.js" />
+    <Content Include="assets\contact\contact_me.js" />
+    <Content Include="assets\contact\jqBootstrapValidation.js" />
+    <Content Include="assets\countdown\dscountdown.css" />
+    <Content Include="assets\countdown\dscountdown.min.js" />
+    <Content Include="assets\flag-icon.css" />
+    <Content Include="assets\owl-carousel\AjaxLoader.gif" />
+    <Content Include="assets\owl-carousel\grabbing.png" />
+    <Content Include="assets\owl-carousel\owl.carousel.css" />
+    <Content Include="assets\owl-carousel\owl.carousel.js" />
+    <Content Include="assets\owl-carousel\owl.carousel.min.js" />
+    <Content Include="assets\owl-carousel\owl.theme.css" />
+    <Content Include="assets\owl-carousel\owl.theme.default.css" />
+    <Content Include="assets\owl-carousel\owl.transitions.css" />
+    <Content Include="assets\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\1.jpg" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\2.jpg" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\3.jpg" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\4.jpg" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\5.jpg" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\6.jpg" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\high.gif" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\huge.gif" />
+    <Content Include="assets\prettyPhoto\images\fullscreen\wide.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="assets\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="assets\prettyPhoto\images\thumbnails\flash-logo.png" />
+    <Content Include="assets\prettyPhoto\images\thumbnails\quicktime-logo.gif" />
+    <Content Include="assets\prettyPhoto\images\thumbnails\t_1.jpg" />
+    <Content Include="assets\prettyPhoto\images\thumbnails\t_2.jpg" />
+    <Content Include="assets\prettyPhoto\images\thumbnails\t_3.jpg" />
+    <Content Include="assets\prettyPhoto\images\thumbnails\t_4.jpg" />
+    <Content Include="assets\prettyPhoto\images\thumbnails\t_5.jpg" />
+    <Content Include="assets\prettyPhoto\index.html" />
+    <Content Include="assets\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <Content Include="assets\prettyPhoto\xhr_response.html" />
+    <Content Include="assets\slider-pro-master\css\slider-pro.min.css" />
+    <Content Include="assets\slider-pro-master\js\jquery.sliderPro.min.js" />
+    <Content Include="assets\switcher\css\color1.css" />
+    <Content Include="assets\switcher\css\color2.css" />
+    <Content Include="assets\switcher\css\color3.css" />
+    <Content Include="assets\switcher\css\color4.css" />
+    <Content Include="assets\switcher\css\switcher.css" />
+    <Content Include="assets\switcher\js\dmss.js" />
+    <Content Include="BackOrder.aspx" />
+    <Content Include="ChangePwd.aspx" />
+    <Content Include="comment.aspx" />
+    <Content Include="css\addstyle.css" />
+    <Content Include="css\admin.css" />
+    <Content Include="css\amazeui.css" />
+    <Content Include="css\amazeui.flat.css" />
+    <Content Include="css\amazeui.flat.min.css" />
+    <Content Include="css\amazeui.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\app.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\fasthover.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\hover-min.css" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="css\jquery.countdown.css" />
+    <Content Include="css\Lato.css" />
+    <Content Include="css\main-slider.css" />
+    <Content Include="css\master.css" />
+    <Content Include="css\Montserrat.css" />
+    <Content Include="css\OpenOrSans.css" />
+    <Content Include="css\orstyle.css" />
+    <Content Include="css\personal.css" />
+    <Content Include="css\popuo-box.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\start-page.css" />
+    <Content Include="css\logstyle.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\systyle.css" />
+    <Content Include="css\theme.css" />
+    <Content Include="css\typography.css" />
+    <Content Include="flags\4x3\fr.svg" />
+    <Content Include="flags\4x3\gb.svg" />
+    <Content Include="fonts\elegant_font\ElegantIcons.svg" />
+    <Content Include="fonts\elegant_font\style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="HouAllOrder.aspx" />
+    <Content Include="HouFahuo.aspx" />
+    <Content Include="HouIndex.aspx" />
+    <Content Include="HouOrderLoad.aspx" />
+    <Content Include="HouUsers.aspx" />
+    <Content Include="HouWelcome.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\10.jpg" />
+    <Content Include="images\11.jpg" />
+    <Content Include="images\12.jpg" />
+    <Content Include="images\13.jpg" />
+    <Content Include="images\14.jpg" />
+    <Content Include="images\15.jpg" />
+    <Content Include="images\16.jpg" />
+    <Content Include="images\17.jpg" />
+    <Content Include="images\18.jpg" />
+    <Content Include="images\19.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\20.jpg" />
+    <Content Include="images\21.jpg" />
+    <Content Include="images\22.jpg" />
+    <Content Include="images\23.jpg" />
+    <Content Include="images\24.jpg" />
+    <Content Include="images\25.jpg" />
+    <Content Include="images\26.jpg" />
+    <Content Include="images\27.jpg" />
+    <Content Include="images\28.jpg" />
+    <Content Include="images\29.jpg" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\30.jpg" />
+    <Content Include="images\31.jpg" />
+    <Content Include="images\32.jpg" />
+    <Content Include="images\33.jpg" />
+    <Content Include="images\34.jpg" />
+    <Content Include="images\35.jpg" />
+    <Content Include="images\36.jpg" />
+    <Content Include="images\37.jpg" />
+    <Content Include="images\38.jpg" />
+    <Content Include="images\39.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\40.jpg" />
+    <Content Include="images\41.jpg" />
+    <Content Include="images\44.jpg" />
+    <Content Include="images\45.jpg" />
+    <Content Include="images\46.jpg" />
+    <Content Include="images\47.jpg" />
+    <Content Include="images\48.jpg" />
+    <Content Include="images\49.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\50.jpg" />
+    <Content Include="images\51.jpg" />
+    <Content Include="images\52.jpg" />
+    <Content Include="images\6.jpg" />
+    <Content Include="images\6367352-1j.jpg" />
+    <Content Include="images\6373554-zxzj.jpg" />
+    <Content Include="images\6373570-1j.jpg" />
+    <Content Include="images\6373591-1j201511201047095592.jpg" />
+    <Content Include="images\6373620-1j201602031645416635.jpg" />
+    <Content Include="images\6373624-1j201602031645462719.jpg" />
+    <Content Include="images\6373701-1j201510141542507484.jpg" />
+    <Content Include="images\6374238-1j201602011327237884.jpg" />
+    <Content Include="images\7.jpg" />
+    <Content Include="images\8.jpg" />
+    <Content Include="images\9.jpg" />
+    <Content Include="images\a.jpg" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\b.jpg" />
+    <Content Include="images\b1.jpg" />
+    <Content Include="images\b2.jpg" />
+    <Content Include="images\b3.jpg" />
+    <Content Include="images\b4.jpg" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\bg1.jpg" />
+    <Content Include="images\bg2.jpg" />
+    <Content Include="images\bg3.jpg" />
+    <Content Include="images\c.jpg" />
+    <Content Include="images\check.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\d1.jpg" />
+    <Content Include="images\d2.jpg" />
+    <Content Include="images\d3.jpg" />
+    <Content Include="images\d4.jpg" />
+    <Content Include="images\dress1.jpg" />
+    <Content Include="images\dress2.jpg" />
+    <Content Include="images\dress3.jpg" />
+    <Content Include="images\dress4.jpg" />
+    <Content Include="images\fhraoqp1.jpg" />
+    <Content Include="images\first-l.svg" />
+    <Content Include="images\g1.jpg" />
+    <Content Include="images\g2.jpg" />
+    <Content Include="images\g3.jpg" />
+    <Content Include="images\g4.jpg" />
+    <Content Include="images\g5.jpg" />
+    <Content Include="images\g6.jpg" />
+    <Content Include="images\i1.png" />
+    <Content Include="images\images\-0-saturn_solar.jpg_220x220.jpg" />
+    <Content Include="images\images\0-item_pic.jpg_220x220.jpg" />
+    <Content Include="images\images\01.jpg" />
+    <Content Include="images\images\01_mid.jpg" />
+    <Content Include="images\images\01_small.jpg" />
+    <Content Include="images\images\02.jpg" />
+    <Content Include="images\images\02_mid.jpg" />
+    <Content Include="images\images\02_small.jpg" />
+    <Content Include="images\images\03.jpg" />
+    <Content Include="images\images\03_mid.jpg" />
+    <Content Include="images\images\03_small.jpg" />
+    <Content Include="images\images\1-item_pic.jpg_220x220.jpg" />
+    <Content Include="images\images\1.jpg" />
+    <Content Include="images\images\10.jpg" />
+    <Content Include="images\images\11.jpg" />
+    <Content Include="images\images\1_160x160.jpg" />
+    <Content Include="images\images\2.jpg" />
+    <Content Include="images\images\2016.png" />
+    <Content Include="images\images\3.jpg" />
+    <Content Include="images\images\3CoOkxrFOP.png" />
+    <Content Include="images\images\4.jpg" />
+    <Content Include="images\images\5.jpg" />
+    <Content Include="images\images\556.png" />
+    <Content Include="images\images\557.png" />
+    <Content Include="images\images\559.png" />
+    <Content Include="images\images\566.png" />
+    <Content Include="images\images\566fda5cN4b8a1675.gif" />
+    <Content Include="images\images\6.jpg" />
+    <Content Include="images\images\62988.jpg_80x80.jpg" />
+    <Content Include="images\images\65.jpg_120x120xz.jpg" />
+    <Content Include="images\images\7.jpg" />
+    <Content Include="images\images\72h.png" />
+    <Content Include="images\images\8.jpg" />
+    <Content Include="images\images\88.jpg_120x120xz.jpg" />
+    <Content Include="images\images\9.jpg" />
+    <Content Include="images\images\act1.png" />
+    <Content Include="images\images\act2.png" />
+    <Content Include="images\images\act3.png" />
+    <Content Include="images\images\activity.jpg" />
+    <Content Include="images\images\activity1.jpg" />
+    <Content Include="images\images\activity2.jpg" />
+    <Content Include="images\images\activity3.jpg" />
+    <Content Include="images\images\ad1.jpg" />
+    <Content Include="images\images\ad2.jpg" />
+    <Content Include="images\images\ad3.jpg" />
+    <Content Include="images\images\ad4.jpg" />
+    <Content Include="images\images\ad5.jpg" />
+    <Content Include="images\images\ad6.jpg" />
+    <Content Include="images\images\ad7.jpg" />
+    <Content Include="images\images\ad8.jpg" />
+    <Content Include="images\images\addbg.png" />
+    <Content Include="images\images\addicon.png" />
+    <Content Include="images\images\addicon1.png" />
+    <Content Include="images\images\addicon2.png" />
+    <Content Include="images\images\advTip.jpg" />
+    <Content Include="images\images\bamboo.jpg" />
+    <Content Include="images\images\bamboo.png" />
+    <Content Include="images\images\big.jpg" />
+    <Content Include="images\images\blog01.jpg" />
+    <Content Include="images\images\blog02.jpg" />
+    <Content Include="images\images\blog03.jpg" />
+    <Content Include="images\images\blog04.jpg" />
+    <Content Include="images\images\blog05.jpg" />
+    <Content Include="images\images\blog06.jpg" />
+    <Content Include="images\images\blog07.jpg" />
+    <Content Include="images\images\blog08.jpg" />
+    <Content Include="images\images\blog09.jpg" />
+    <Content Include="images\images\bonus.png" />
+    <Content Include="images\images\browse1.jpg" />
+    <Content Include="images\images\cake.jpg" />
+    <Content Include="images\images\cake.png" />
+    <Content Include="images\images\candy.jpg" />
+    <Content Include="images\images\candy.png" />
+    <Content Include="images\images\cardbg.jpg" />
+    <Content Include="images\images\checkbox.gif" />
+    <Content Include="images\images\chocolate.jpg" />
+    <Content Include="images\images\chocolate.png" />
+    <Content Include="images\images\chongzhi.png" />
+    <Content Include="images\images\clockbg.png" />
+    <Content Include="images\images\close.png" />
+    <Content Include="images\images\combo.png" />
+    <Content Include="images\images\comment.jpg_400x400.jpg" />
+    <Content Include="images\images\comment.png" />
+    <Content Include="images\images\cookies.jpg" />
+    <Content Include="images\images\cookies.png" />
+    <Content Include="images\images\coupon.png" />
+    <Content Include="images\images\coupon2015.png" />
+    <Content Include="images\images\coupon20150805.png" />
+    <Content Include="images\images\couponli.png" />
+    <Content Include="images\images\cp.jpg" />
+    <Content Include="images\images\cp2.jpg" />
+    <Content Include="images\images\day-to.png" />
+    <Content Include="images\images\extra.png" />
+    <Content Include="images\images\fish.jpg" />
+    <Content Include="images\images\fish.png" />
+    <Content Include="images\images\getAvatar.do.jpg" />
+    <Content Include="images\images\gift_intro_bg.png" />
+    <Content Include="images\images\gift_stamp_1.png" />
+    <Content Include="images\images\gift_stamp_2.png" />
+    <Content Include="images\images\gift_stamp_21.png" />
+    <Content Include="images\images\gift_stamp_3.png" />
+    <Content Include="images\images\gift_stamp_31.png" />
+    <Content Include="images\images\header-bg.png" />
+    <Content Include="images\images\header-bg1.jpg" />
+    <Content Include="images\images\huismall.jpg" />
+    <Content Include="images\images\hwbn40x40.jpg" />
+    <Content Include="images\images\ibar_sprites.png" />
+    <Content Include="images\images\icon-sale.png" />
+    <Content Include="images\images\iconbig.png" />
+    <Content Include="images\images\iconfont-bad.png" />
+    <Content Include="images\images\iconfont-badon.png" />
+    <Content Include="images\images\iconfont-evaluate.png" />
+    <Content Include="images\images\iconfont-good.png" />
+    <Content Include="images\images\iconfont-middle.png" />
+    <Content Include="images\images\iconsmall.png" />
+    <Content Include="images\images\iconsmall0.png" />
+    <Content Include="images\images\iconsmall1.png" />
+    <Content Include="images\images\iconsmall2.png" />
+    <Content Include="images\images\iconsmall3.png" />
+    <Content Include="images\images\image.jpg" />
+    <Content Include="images\images\imgsearch1.jpg" />
+    <Content Include="images\images\index_ico_png32.png" />
+    <Content Include="images\images\item-pic.jpg" />
+    <Content Include="images\images\kouhong.jpg_80x80.jpg" />
+    <Content Include="images\images\kuaidi.png" />
+    <Content Include="images\images\list1.jpg" />
+    <Content Include="images\images\listsmall1.jpg" />
+    <Content Include="images\images\loading.gif" />
+    <Content Include="images\images\logo.png" />
+    <Content Include="images\images\logo1.png" />
+    <Content Include="images\images\logobig.png" />
+    <Content Include="images\images\logobig1.png" />
+    <Content Include="images\images\logobig2.png" />
+    <Content Include="images\images\mansmall.jpg" />
+    <Content Include="images\images\mask.png" />
+    <Content Include="images\images\meat.jpg" />
+    <Content Include="images\images\meat.png" />
+    <Content Include="images\images\moneysmall.jpg" />
+    <Content Include="images\images\mygift_bg.png" />
+    <Content Include="images\images\navce.png" />
+    <Content Include="images\images\navsmall.jpg" />
+    <Content Include="images\images\no-img_mid_.jpg" />
+    <Content Include="images\images\nut.jpg" />
+    <Content Include="images\images\nut.png" />
+    <Content Include="images\images\package.jpg" />
+    <Content Include="images\images\package.png" />
+    <Content Include="images\images\pay.png" />
+    <Content Include="images\images\peraddbg.png" />
+    <Content Include="images\images\peraddress.png" />
+    <Content Include="images\images\peraddressbg.png" />
+    <Content Include="images\images\receive.png" />
+    <Content Include="images\images\refund.png" />
+    <Content Include="images\images\return-process-cd.jpg" />
+    <Content Include="images\images\row1.jpg" />
+    <Content Include="images\images\row2.jpg" />
+    <Content Include="images\images\row3.jpg" />
+    <Content Include="images\images\row4.jpg" />
+    <Content Include="images\images\sale-t.jpg" />
+    <Content Include="images\images\sale-t_clock.jpg" />
+    <Content Include="images\images\sale1.jpg" />
+    <Content Include="images\images\sale2.jpg" />
+    <Content Include="images\images\sale3.jpg" />
+    <Content Include="images\images\scoll1.png" />
+    <Content Include="images\images\scoll2.png" />
+    <Content Include="images\images\send.png" />
+    <Content Include="images\images\side.png" />
+    <Content Include="images\images\songzi.jpg" />
+    <Content Include="images\images\sprite.png" />
+    <Content Include="images\images\sys_item_selected.gif" />
+    <Content Include="images\images\T13iv.XiFdXXa94Hfd-32-32.png" />
+    <Content Include="images\images\TB102.jpg" />
+    <Content Include="images\images\TB1SSK7JpXXXXXCXXXXXXXXXXXX-800-600.png" />
+    <Content Include="images\images\TB1_pic.jpg_200x200.jpg" />
+    <Content Include="images\images\tea.jpg" />
+    <Content Include="images\images\tea.png" />
+    <Content Include="images\images\TJ.jpg" />
+    <Content Include="images\images\tj.png" />
+    <Content Include="images\images\tj1.png" />
+    <Content Include="images\images\TJ2.jpg" />
+    <Content Include="images\images\tj2.png" />
+    <Content Include="images\images\tw1.jpg" />
+    <Content Include="images\images\tw2.jpg" />
+    <Content Include="images\images\tw3.jpg" />
+    <Content Include="images\images\tw4.jpg" />
+    <Content Include="images\images\tw5.jpg" />
+    <Content Include="images\images\tw6.jpg" />
+    <Content Include="images\images\tw7.jpg" />
+    <Content Include="images\images\wallet.png" />
+    <Content Include="images\images\wangyin.jpg" />
+    <Content Include="images\images\wdsc.png" />
+    <Content Include="images\images\weixin_code_145.png" />
+    <Content Include="images\images\weizhifu.jpg" />
+    <Content Include="images\images\YXARdXxj5.png" />
+    <Content Include="images\images\zhifubao.jpg" />
+    <Content Include="images\images\图标.png" />
+    <Content Include="images\img-sp.png" />
+    <Content Include="images\last-l.svg" />
+    <Content Include="images\left-arrow.png" />
+    <Content Include="images\logo\adidas.jpg" />
+    <Content Include="images\logo\chanel.jpg" />
+    <Content Include="images\logo\HLAN.jpg" />
+    <Content Include="images\logo\Inman.jpg" />
+    <Content Include="images\logo\only.jpg" />
+    <Content Include="images\logo\Semir.jpg" />
+    <Content Include="images\logo\seven.jpg" />
+    <Content Include="images\m1.jpg" />
+    <Content Include="images\m2.jpeg" />
+    <Content Include="images\m2.jpg" />
+    <Content Include="images\m3.jpg" />
+    <Content Include="images\m4.jpg" />
+    <Content Include="images\m5.jpg" />
+    <Content Include="images\m6.jpg" />
+    <Content Include="images\men.jpg" />
+    <Content Include="images\men1.jpg" />
+    <Content Include="images\men2.jpg" />
+    <Content Include="images\p1 %282%29.jpg" />
+    <Content Include="images\p1.jpg" />
+    <Content Include="images\p10.jpg" />
+    <Content Include="images\p11.jpg" />
+    <Content Include="images\p12.jpg" />
+    <Content Include="images\p13.jpg" />
+    <Content Include="images\p2.jpg" />
+    <Content Include="images\p3.jpg" />
+    <Content Include="images\p4.jpg" />
+    <Content Include="images\p5.jpg" />
+    <Content Include="images\p6.jpg" />
+    <Content Include="images\P7.jpg" />
+    <Content Include="images\p8.jpg" />
+    <Content Include="images\p9.jpg" />
+    <Content Include="images\page-header-bg.jpg" />
+    <Content Include="images\pi5.jpg" />
+    <Content Include="images\pi6.jpg" />
+    <Content Include="images\pic-1.jpg" />
+    <Content Include="images\pic-10.jpg" />
+    <Content Include="images\pic-11.jpg" />
+    <Content Include="images\pic-2.jpg" />
+    <Content Include="images\pic-5.jpg" />
+    <Content Include="images\pic-9.jpg" />
+    <Content Include="images\pic.jpg" />
+    <Content Include="images\pic1.jpg" />
+    <Content Include="images\pic10.jpg" />
+    <Content Include="images\pic11.jpg" />
+    <Content Include="images\pic12.jpg" />
+    <Content Include="images\pic13.jpg" />
+    <Content Include="images\pic2.jpg" />
+    <Content Include="images\pic3.jpg" />
+    <Content Include="images\pic4 %282%29.jpg" />
+    <Content Include="images\pic4.jpg" />
+    <Content Include="images\pic5.jpg" />
+    <Content Include="images\pic6.jpg" />
+    <Content Include="images\pic7.jpg" />
+    <Content Include="images\pic8.jpg" />
+    <Content Include="images\pic9 %282%29.jpg" />
+    <Content Include="images\pic9.jpg" />
+    <Content Include="images\po.jpg" />
+    <Content Include="images\po1.jpg" />
+    <Content Include="images\po2.jpg" />
+    <Content Include="images\po3.jpg" />
+    <Content Include="images\po4.jpg" />
+    <Content Include="images\po5.jpg" />
+    <Content Include="images\po6.jpg" />
+    <Content Include="images\product10.jpg" />
+    <Content Include="images\product12.jpg" />
+    <Content Include="images\product8.jpg" />
+    <Content Include="images\product9.jpg" />
+    <Content Include="images\right-arrow.png" />
+    <Content Include="images\s1 %282%29.jpg" />
+    <Content Include="images\s1.jpg" />
+    <Content Include="images\s11.jpg" />
+    <Content Include="images\s2 %282%29.jpg" />
+    <Content Include="images\s2.jpg" />
+    <Content Include="images\s3 %282%29.jpg" />
+    <Content Include="images\s3.jpg" />
+    <Content Include="images\s4 %282%29.jpg" />
+    <Content Include="images\s4.jpg" />
+    <Content Include="images\second-l.svg" />
+    <Content Include="images\sin-1.jpg" />
+    <Content Include="images\sin-3.jpg" />
+    <Content Include="images\sin-4.jpg" />
+    <Content Include="images\sin1.jpg" />
+    <Content Include="images\star-.png" />
+    <Content Include="images\star.png" />
+    <Content Include="images\t1.png" />
+    <Content Include="images\t2.png" />
+    <Content Include="images\t3.png" />
+    <Content Include="images\t4.png" />
+    <Content Include="images\t5.png" />
+    <Content Include="images\t6.png" />
+    <Content Include="images\t7.png" />
+    <Content Include="images\tb1.jpg" />
+    <Content Include="images\tb2.jpg" />
+    <Content Include="images\tb3.jpg" />
+    <Content Include="images\tb4.jpg" />
+    <Content Include="images\tb5.jpg" />
+    <Content Include="images\w1.jpg" />
+    <Content Include="images\w2.jpg" />
+    <Content Include="images\w3.jpg" />
+    <Content Include="images\w4.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="Information.aspx" />
+    <Content Include="js\amazeui.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\ShoppingCartJavaScript.js" />
+    <Content Include="js\bootstrap-3.1.1.min.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\easyResponsiveTabs.js" />
+    <Content Include="js\imagezoom.js" />
+    <Content Include="js\isotope.pkgd.min.js" />
+    <Content Include="js\jquery-1.11.2.min.js" />
+    <Content Include="js\jquery-1.12.4.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.countdown.js" />
+    <Content Include="js\jquery.easypiechart.min.js" />
+    <Content Include="js\jquery.flexisel.js" />
+    <Content Include="js\jquery.flexslider.js" />
+    <Content Include="js\jquery.magnific-popup.js" />
+    <Content Include="js\jquery.min %282%29.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.placeholder.min.js" />
+    <Content Include="js\jquery.spinner.min.js" />
+    <Content Include="js\jquery.wmuSlider.js" />
+    <Content Include="js\minicart.js" />
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\smoothscroll.min.js" />
+    <Content Include="js\theme.js" />
+    <Content Include="js\waypoints.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="lib\datatables\1.10.0\jquery.dataTables.min.js" />
+    <Content Include="lib\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="lib\echarts\3.4.0\echarts.common.min.js" />
+    <Content Include="lib\expressInstall.swf" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\highcharts-3d.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\highcharts-more.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\highcharts.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\accessibility.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\accessibility.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\annotations.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\annotations.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\boost.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\boost.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\broken-axis.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\broken-axis.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\data.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\data.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\drilldown.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\drilldown.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\exporting.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\exporting.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\funnel.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\funnel.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\gantt.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\gantt.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\grid-axis.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\grid-axis.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\heatmap.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\heatmap.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\no-data-to-display.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\no-data-to-display.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\offline-exporting.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\offline-exporting.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\overlapping-datalabels.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\overlapping-datalabels.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\series-label.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\series-label.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\solid-gauge.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\solid-gauge.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\treemap.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\treemap.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\xrange-series.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\modules\xrange-series.src.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\themes\dark-blue.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\themes\dark-green.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\themes\dark-unica.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\themes\gray.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\themes\grid-light.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\themes\grid.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\themes\sand-signika.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\js\themes\skies.js" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\readme.txt" />
+    <Content Include="lib\html5shiv.js" />
+    <Content Include="lib\Hui-iconfont\1.0.8\demo.html" />
+    <Content Include="lib\Hui-iconfont\1.0.8\iconfont.css" />
+    <Content Include="lib\Hui-iconfont\1.0.8\iconfont.min.css" />
+    <Content Include="lib\Hui-iconfont\1.0.8\iconfont.svg" />
+    <Content Include="lib\jquery.contextmenu\jquery.contextmenu.r2.js" />
+    <Content Include="lib\jquery.SuperSlide\2.1.1\jquery.SuperSlide.min.js" />
+    <Content Include="lib\jquery.validation\1.14.0\additional-methods.js" />
+    <Content Include="lib\jquery.validation\1.14.0\jquery.validate.js" />
+    <Content Include="lib\jquery.validation\1.14.0\messages_zh.js" />
+    <Content Include="lib\jquery.validation\1.14.0\validate-methods.js" />
+    <Content Include="lib\jquery\1.9.1\jquery.js" />
+    <Content Include="lib\jquery\1.9.1\jquery.min.js" />
+    <Content Include="lib\jselect-1.0.js" />
+    <Content Include="lib\layer\2.4\layer.js" />
+    <Content Include="lib\layer\2.4\skin\default\icon-ext.png" />
+    <Content Include="lib\layer\2.4\skin\default\icon.png" />
+    <Content Include="lib\layer\2.4\skin\default\loading-0.gif" />
+    <Content Include="lib\layer\2.4\skin\default\loading-1.gif" />
+    <Content Include="lib\layer\2.4\skin\default\loading-2.gif" />
+    <Content Include="lib\layer\2.4\skin\layer.css" />
+    <Content Include="lib\laypage\1.2\laypage.js" />
+    <Content Include="lib\laypage\1.2\skin\laypage.css" />
+    <Content Include="lib\lightbox2\2.8.1\css\lightbox.css" />
+    <Content Include="lib\lightbox2\2.8.1\examples.html" />
+    <Content Include="lib\lightbox2\2.8.1\images\close.png" />
+    <Content Include="lib\lightbox2\2.8.1\images\loading.gif" />
+    <Content Include="lib\lightbox2\2.8.1\images\next.png" />
+    <Content Include="lib\lightbox2\2.8.1\images\prev.png" />
+    <Content Include="lib\lightbox2\2.8.1\js\lightbox-plus-jquery.js" />
+    <Content Include="lib\lightbox2\2.8.1\js\lightbox-plus-jquery.min.js" />
+    <Content Include="lib\lightbox2\2.8.1\js\lightbox.js" />
+    <Content Include="lib\lightbox2\2.8.1\js\lightbox.min.js" />
+    <Content Include="lib\My97DatePicker\4.8\calendar.js" />
+    <Content Include="lib\My97DatePicker\4.8\lang\en.js" />
+    <Content Include="lib\My97DatePicker\4.8\lang\zh-cn.js" />
+    <Content Include="lib\My97DatePicker\4.8\lang\zh-tw.js" />
+    <Content Include="lib\My97DatePicker\4.8\skin\datePicker.gif" />
+    <Content Include="lib\My97DatePicker\4.8\skin\default\datepicker.css" />
+    <Content Include="lib\My97DatePicker\4.8\skin\default\img.gif" />
+    <Content Include="lib\My97DatePicker\4.8\skin\twoer\datepicker-dev.css" />
+    <Content Include="lib\My97DatePicker\4.8\skin\twoer\datepicker.css" />
+    <Content Include="lib\My97DatePicker\4.8\skin\twoer\img.gif" />
+    <Content Include="lib\My97DatePicker\4.8\skin\twoer\img.png" />
+    <Content Include="lib\My97DatePicker\4.8\skin\WdatePicker.css" />
+    <Content Include="lib\My97DatePicker\4.8\skin\whyGreen\bg.jpg" />
+    <Content Include="lib\My97DatePicker\4.8\skin\whyGreen\datepicker.css" />
+    <Content Include="lib\My97DatePicker\4.8\skin\whyGreen\img.gif" />
+    <Content Include="lib\My97DatePicker\4.8\WdatePicker.js" />
+    <Content Include="lib\nprogress\0.2.0\nprogress.css" />
+    <Content Include="lib\nprogress\0.2.0\nprogress.js" />
+    <Content Include="lib\nprogress\0.2.0\nprogress.min.css" />
+    <Content Include="lib\nprogress\0.2.0\nprogress.min.js" />
+    <Content Include="lib\respond.min.js" />
+    <Content Include="lib\squid.js" />
+    <Content Include="lib\swfobject.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\anchor\anchor.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\attachment.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\attachment.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\attachment.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\alignicon.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\bg.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\file-icons.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\icons.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\icons.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\image.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\progress.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\success.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\attachment\images\success.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\background\background.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\background\background.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\background\background.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\background\images\bg.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\background\images\success.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\chart.config.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\charts.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\charts.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\charts.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\images\charts0.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\images\charts1.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\images\charts2.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\images\charts3.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\images\charts4.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\charts\images\charts5.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\emotion.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\emotion.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\emotion.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\0.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\bface.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\cface.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\fface.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\tface.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\wface.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\emotion\images\yface.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\gmap\gmap.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\help\help.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\help\help.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\help\help.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\image.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\image.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\image.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\images\alignicon.jpg" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\images\bg.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\images\icons.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\images\icons.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\images\image.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\images\progress.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\images\success.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\image\images\success.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\insertframe\insertframe.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\internal.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\link\link.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\map\map.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\map\show.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\music\music.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\music\music.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\music\music.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\preview\preview.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\addimg.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\brush.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\delimg.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\empty.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\eraser.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\redo.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\redoH.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\scale.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\size.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\undo.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\images\undoH.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\scrawl.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\scrawl.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\scrawl\scrawl.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\spechars\spechars.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\spechars\spechars.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\table\dragicon.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\table\edittable.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\table\edittable.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\table\edittable.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\table\edittd.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\table\edittip.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\config.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\images\bg.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\images\pre0.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\images\pre1.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\images\pre2.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\images\pre3.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\images\pre4.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\template.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\template.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\template\template.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\bg.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\center_focus.jpg" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\file-icons.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\file-icons.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\icons.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\icons.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\image.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\left_focus.jpg" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\none_focus.jpg" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\progress.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\right_focus.jpg" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\success.gif" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\images\success.png" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\video.css" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\video.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\video\video.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\webapp\webapp.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\wordimage\tangram.js" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\wordimage\wordimage.html" />
+    <Content Include="lib\ueditor\1.4.3\dialogs\wordimage\wordimage.js" />
+    <Content Include="lib\ueditor\1.4.3\index.html" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\en.js" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\addimage.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\background.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\button.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\copy.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\deletedisable.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\deleteenable.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\listbackground.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\localimage.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\music.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\rotateleftdisable.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\rotateleftenable.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\rotaterightdisable.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\rotaterightenable.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\en\images\upload.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\zh-cn\images\copy.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\zh-cn\images\localimage.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\zh-cn\images\music.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\zh-cn\images\upload.png" />
+    <Content Include="lib\ueditor\1.4.3\lang\zh-cn\zh-cn.js" />
+    <Content Include="lib\ueditor\1.4.3\net\Bin\Newtonsoft.Json.dll" />
+    <Content Include="lib\ueditor\1.4.3\net\Bin\Newtonsoft.Json.pdb" />
+    <Content Include="lib\ueditor\1.4.3\net\Bin\Newtonsoft.Json.xml" />
+    <Content Include="lib\ueditor\1.4.3\net\net.sln" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\css\ueditor.css" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\css\ueditor.min.css" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\dialogbase.css" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\anchor.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\arrow.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\arrow_down.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\arrow_up.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\button-bg.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\cancelbutton.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\charts.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\cursor_h.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\cursor_h.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\cursor_v.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\cursor_v.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\dialog-title-bg.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\filescan.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\highlighted.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\icons-all.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\icons.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\icons.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\loaderror.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\loading.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\lock.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\pagebreak.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\scale.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\sortable.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\spacer.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\sparator_v.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\table-cell-align.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\toolbar_bg.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\unhighlighted.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\upload.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\videologo.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\word.gif" />
+    <Content Include="lib\ueditor\1.4.3\themes\default\images\wordpaste.png" />
+    <Content Include="lib\ueditor\1.4.3\themes\iframe.css" />
+    <Content Include="lib\ueditor\1.4.3\third-party\codemirror\codemirror.css" />
+    <Content Include="lib\ueditor\1.4.3\third-party\codemirror\codemirror.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\highcharts-more.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\highcharts.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\highcharts.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\annotations.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\data.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\data.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\exporting.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\funnel.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\map.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\map.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\themes\gray.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\themes\grid.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\highcharts\themes\skies.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\jquery-1.10.2.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\jquery-1.10.2.min.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="lib\ueditor\1.4.3\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\font\vjs.svg" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\video-js.css" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\video-js.min.css" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\video-js.swf" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\video.dev.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\video.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\Uploader.swf" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.css" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.min.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="lib\ueditor\1.4.3\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="lib\ueditor\1.4.3\ueditor.all.js" />
+    <Content Include="lib\ueditor\1.4.3\ueditor.all.min.js" />
+    <Content Include="lib\ueditor\1.4.3\ueditor.config.js" />
+    <Content Include="lib\ueditor\1.4.3\ueditor.parse.js" />
+    <Content Include="lib\ueditor\1.4.3\ueditor.parse.min.js" />
+    <Content Include="lib\webuploader\0.1.5\cropper\cropper.js" />
+    <Content Include="lib\webuploader\0.1.5\cropper\index.html" />
+    <Content Include="lib\webuploader\0.1.5\cropper\uploader.js" />
+    <Content Include="lib\webuploader\0.1.5\expressInstall.swf" />
+    <Content Include="lib\webuploader\0.1.5\image-upload\index.html" />
+    <Content Include="lib\webuploader\0.1.5\image-upload\upload.js" />
+    <Content Include="lib\webuploader\0.1.5\images\bg.png" />
+    <Content Include="lib\webuploader\0.1.5\images\icons.png" />
+    <Content Include="lib\webuploader\0.1.5\images\image.png" />
+    <Content Include="lib\webuploader\0.1.5\images\progress.png" />
+    <Content Include="lib\webuploader\0.1.5\images\success.png" />
+    <Content Include="lib\webuploader\0.1.5\md5-demo\index.html" />
+    <Content Include="lib\webuploader\0.1.5\md5-demo\script.js" />
+    <Content Include="lib\webuploader\0.1.5\requirejs\app.js" />
+    <Content Include="lib\webuploader\0.1.5\requirejs\index.html" />
+    <Content Include="lib\webuploader\0.1.5\requirejs\require.js" />
+    <Content Include="lib\webuploader\0.1.5\server\crossdomain.xml" />
+    <Content Include="lib\webuploader\0.1.5\Uploader.swf" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.css" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.custom.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.custom.min.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.fis.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.flashonly.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.flashonly.min.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.html5only.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.html5only.min.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.min.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.noimage.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.noimage.min.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.nolog.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.nolog.min.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.withoutimage.js" />
+    <Content Include="lib\webuploader\0.1.5\webuploader.withoutimage.min.js" />
+    <Content Include="lib\zTree\v3\api\apiCss\api.js" />
+    <Content Include="lib\zTree\v3\api\apiCss\common.css" />
+    <Content Include="lib\zTree\v3\api\apiCss\common_ie6.css" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\apiMenu.gif" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\apiMenu.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\background.jpg" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\chinese.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\close.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\contact-bg.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\english.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\header-bg.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\lightbulb.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\overlay_arrow.gif" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\overlay_arrow.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\overlay_bg.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\overlay_close_IE6.gif" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\zTreeStandard.gif" />
+    <Content Include="lib\zTree\v3\api\apiCss\img\zTreeStandard.png" />
+    <Content Include="lib\zTree\v3\api\apiCss\jquery-1.6.2.min.js" />
+    <Content Include="lib\zTree\v3\api\apiCss\jquery.ztree.core-3.5.js" />
+    <Content Include="lib\zTree\v3\api\apiCss\zTreeStyleForApi.css" />
+    <Content Include="lib\zTree\v3\api\API_cn.html" />
+    <Content Include="lib\zTree\v3\api\API_en.html" />
+    <Content Include="lib\zTree\v3\api\cn\fn.zTree.destroy.html" />
+    <Content Include="lib\zTree\v3\api\cn\fn.zTree.getZTreeObj.html" />
+    <Content Include="lib\zTree\v3\api\cn\fn.zTree.init.html" />
+    <Content Include="lib\zTree\v3\api\cn\fn.zTree._z.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.async.autoParam.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.async.contentType.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.async.dataFilter.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.async.dataType.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.async.enable.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.async.otherParam.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.async.type.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.async.url.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeAsync.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeCheck.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeClick.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeCollapse.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeDblClick.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeDrag.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeDragOpen.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeDrop.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeEditName.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeExpand.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeMouseDown.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeMouseUp.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeRemove.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeRename.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.beforeRightClick.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onAsyncError.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onAsyncSuccess.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onCheck.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onClick.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onCollapse.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onDblClick.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onDrag.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onDragMove.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onDrop.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onExpand.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onMouseDown.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onMouseUp.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onNodeCreated.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onRemove.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onRename.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.callback.onRightClick.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.check.autoCheckTrigger.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.check.chkboxType.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.check.chkDisabledInherit.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.check.chkStyle.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.check.enable.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.check.nocheckInherit.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.check.radioType.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.keep.leaf.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.keep.parent.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.key.checked.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.key.children.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.key.name.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.key.title.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.key.url.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.simpleData.enable.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.simpleData.idKey.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.simpleData.pIdKey.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.data.simpleData.rootPId.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.autoExpandTrigger.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.autoOpenTime.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.borderMax.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.borderMin.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.inner.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.isCopy.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.isMove.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.maxShowNodeNum.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.minMoveSize.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.next.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.drag.prev.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.editNameSelectAll.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.enable.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.removeTitle.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.renameTitle.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.showRemoveBtn.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.edit.showRenameBtn.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.treeId.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.treeObj.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.addDiyDom.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.addHoverDom.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.autoCancelSelected.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.dblClickExpand.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.expandSpeed.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.fontCss.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.nameIsHTML.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.removeHoverDom.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.selectedMulti.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.showIcon.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.showLine.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.showTitle.html" />
+    <Content Include="lib\zTree\v3\api\cn\setting.view.txtSelectedEnable.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.checked.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.checkedOld.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.check_Child_State.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.check_Focus.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.children.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.chkDisabled.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.click.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.diy.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.editNameFlag.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.getCheckStatus.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.getNextNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.getParentNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.getPreNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.halfCheck.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.icon.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.iconClose.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.iconOpen.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.iconSkin.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.isAjaxing.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.isFirstNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.isHidden.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.isHover.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.isLastNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.isParent.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.level.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.name.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.nocheck.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.open.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.parentTId.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.target.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.tId.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.url.html" />
+    <Content Include="lib\zTree\v3\api\cn\treeNode.zAsync.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.addNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.cancelEditName.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.cancelSelectedNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.checkAllNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.checkNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.copyNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.destroy.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.editName.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.expandAll.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.expandNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getChangeCheckedNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getCheckedNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getNodeByParam.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getNodeByTId.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getNodeIndex.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getNodesByFilter.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getNodesByParam.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getNodesByParamFuzzy.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.getSelectedNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.hideNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.hideNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.moveNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.reAsyncChildNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.refresh.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.removeChildNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.removeNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.selectNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.setChkDisabled.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.setEditable.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.setting.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.showNode.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.showNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.transformToArray.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.transformTozTreeNodes.html" />
+    <Content Include="lib\zTree\v3\api\cn\zTreeObj.updateNode.html" />
+    <Content Include="lib\zTree\v3\api\en\fn.zTree.destroy.html" />
+    <Content Include="lib\zTree\v3\api\en\fn.zTree.getZTreeObj.html" />
+    <Content Include="lib\zTree\v3\api\en\fn.zTree.init.html" />
+    <Content Include="lib\zTree\v3\api\en\fn.zTree._z.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.async.autoParam.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.async.contentType.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.async.dataFilter.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.async.dataType.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.async.enable.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.async.otherParam.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.async.type.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.async.url.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeAsync.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeCheck.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeClick.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeCollapse.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeDblClick.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeDrag.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeDragOpen.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeDrop.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeEditName.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeExpand.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeMouseDown.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeMouseUp.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeRemove.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeRename.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.beforeRightClick.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onAsyncError.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onAsyncSuccess.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onCheck.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onClick.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onCollapse.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onDblClick.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onDrag.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onDragMove.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onDrop.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onExpand.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onMouseDown.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onMouseUp.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onNodeCreated.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onRemove.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onRename.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.callback.onRightClick.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.check.autoCheckTrigger.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.check.chkboxType.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.check.chkDisabledInherit.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.check.chkStyle.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.check.enable.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.check.nocheckInherit.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.check.radioType.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.keep.leaf.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.keep.parent.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.key.checked.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.key.children.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.key.name.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.key.title.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.key.url.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.simpleData.enable.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.simpleData.idKey.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.simpleData.pIdKey.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.data.simpleData.rootPId.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.autoExpandTrigger.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.autoOpenTime.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.borderMax.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.borderMin.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.inner.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.isCopy.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.isMove.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.maxShowNodeNum.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.minMoveSize.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.next.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.drag.prev.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.editNameSelectAll.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.enable.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.removeTitle.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.renameTitle.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.showRemoveBtn.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.edit.showRenameBtn.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.treeId.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.treeObj.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.addDiyDom.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.addHoverDom.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.autoCancelSelected.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.dblClickExpand.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.expandSpeed.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.fontCss.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.nameIsHTML.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.removeHoverDom.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.selectedMulti.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.showIcon.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.showLine.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.showTitle.html" />
+    <Content Include="lib\zTree\v3\api\en\setting.view.txtSelectedEnable.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.checked.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.checkedOld.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.check_Child_State.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.check_Focus.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.children.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.chkDisabled.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.click.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.diy.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.editNameFlag.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.getCheckStatus.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.getNextNode.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.getParentNode.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.getPreNode.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.halfCheck.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.icon.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.iconClose.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.iconOpen.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.iconSkin.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.isAjaxing.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.isFirstNode.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.isHidden.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.isHover.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.isLastNode.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.isParent.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.level.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.name.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.nocheck.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.open.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.parentTId.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.target.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.tId.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.url.html" />
+    <Content Include="lib\zTree\v3\api\en\treeNode.zAsync.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.addNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.cancelEditName.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.cancelSelectedNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.checkAllNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.checkNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.copyNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.destroy.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.editName.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.expandAll.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.expandNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getChangeCheckedNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getCheckedNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getNodeByParam.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getNodeByTId.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getNodeIndex.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getNodesByFilter.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getNodesByParam.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getNodesByParamFuzzy.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.getSelectedNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.hideNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.hideNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.moveNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.reAsyncChildNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.refresh.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.removeChildNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.removeNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.selectNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.setChkDisabled.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.setEditable.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.setting.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.showNode.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.showNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.transformToArray.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.transformTozTreeNodes.html" />
+    <Content Include="lib\zTree\v3\api\en\zTreeObj.updateNode.html" />
+    <Content Include="lib\zTree\v3\css\metroStyle\img\line_conn.png" />
+    <Content Include="lib\zTree\v3\css\metroStyle\img\loading.gif" />
+    <Content Include="lib\zTree\v3\css\metroStyle\img\metro.gif" />
+    <Content Include="lib\zTree\v3\css\metroStyle\img\metro.png" />
+    <Content Include="lib\zTree\v3\css\metroStyle\metroStyle.css" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\loading.gif" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.all-3.5.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.core-3.5.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.core-3.5.min.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.excheck-3.5.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.excheck-3.5.min.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.exedit-3.5.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.exedit-3.5.min.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.exedit.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.exhide-3.5.js" />
+    <Content Include="lib\zTree\v3\js\jquery.ztree.exhide-3.5.min.js" />
+    <Content Include="Log.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="media-g\blog\latest-prev\prev1.jpg" />
+    <Content Include="media-g\blog\latest-prev\prev2.jpg" />
+    <Content Include="media-g\blog\latest-prev\prev3.jpg" />
+    <Content Include="media-g\blog\post-img-big.jpg" />
+    <Content Include="media-g\blog\post-img1.jpg" />
+    <Content Include="media-g\blog\post-img2.jpg" />
+    <Content Include="media-g\blog\post-prev1-home.jpg" />
+    <Content Include="media-g\blog\post-prev1.jpg" />
+    <Content Include="media-g\blog\post-prev2-home.jpg" />
+    <Content Include="media-g\blog\post-prev2.jpg" />
+    <Content Include="media-g\blog\post-prev3-home.jpg" />
+    <Content Include="media-g\blog\post-prev3.jpg" />
+    <Content Include="media-g\blog\post-prev4.jpg" />
+    <Content Include="media-g\blog\post-prev5.jpg" />
+    <Content Include="media-g\blog\userpics\user1.jpg" />
+    <Content Include="media-g\blog\userpics\user2.jpg" />
+    <Content Include="media-g\brand-logos\gone.png" />
+    <Content Include="media-g\brand-logos\mike.png" />
+    <Content Include="media-g\brand-logos\rick.png" />
+    <Content Include="media-g\brand-logos\roman.png" />
+    <Content Include="media-g\brand-logos\sa.png" />
+    <Content Include="media-g\brand-logos\xmob.png" />
+    <Content Include="media-g\cart-products\6s.jpg" />
+    <Content Include="media-g\cart-products\huaw.jpg" />
+    <Content Include="media-g\cart-products\product1.jpg" />
+    <Content Include="media-g\cart-products\product2.jpg" />
+    <Content Include="media-g\cart-products\sams.jpg" />
+    <Content Include="media-g\demo-page\01_home-1.jpg" />
+    <Content Include="media-g\demo-page\02_home-2.jpg" />
+    <Content Include="media-g\demo-page\03_home-3.jpg" />
+    <Content Include="media-g\demo-page\04_category-1-grid.jpg" />
+    <Content Include="media-g\demo-page\05_category-2-grid.jpg" />
+    <Content Include="media-g\demo-page\06_category-3-list.jpg" />
+    <Content Include="media-g\demo-page\07_category-4-list.jpg" />
+    <Content Include="media-g\demo-page\08_product-details-1.jpg" />
+    <Content Include="media-g\demo-page\09_product-details-2.jpg" />
+    <Content Include="media-g\demo-page\10_blog-main.jpg" />
+    <Content Include="media-g\demo-page\11_blog-post.jpg" />
+    <Content Include="media-g\demo-page\12_my-wishlist.jpg" />
+    <Content Include="media-g\demo-page\13_shopping-cart.jpg" />
+    <Content Include="media-g\demo-page\14_contact.jpg" />
+    <Content Include="media-g\demo-page\15_404.jpg" />
+    <Content Include="media-g\demo-page\17_typography.jpg" />
+    <Content Include="media-g\demo-page\documentation.jpg" />
+    <Content Include="media-g\demo-page\header.jpg" />
+    <Content Include="media-g\demo-page\mac.png" />
+    <Content Include="media-g\filter-smart\smart1.jpg" />
+    <Content Include="media-g\filter-smart\smart2.jpg" />
+    <Content Include="media-g\filter-smart\smart3.jpg" />
+    <Content Include="media-g\item-card-media\6s-plus.jpg" />
+    <Content Include="media-g\item-card-media\6s.jpg" />
+    <Content Include="media-g\item-card-media\core-prime.jpg" />
+    <Content Include="media-g\item-card-media\g84g.jpg" />
+    <Content Include="media-g\item-card-media\hot-deal-mod.png" />
+    <Content Include="media-g\item-card-media\hot-deal.jpg" />
+    <Content Include="media-g\item-card-media\huaew-mate.jpg" />
+    <Content Include="media-g\item-card-media\huaew-nexus.jpg" />
+    <Content Include="media-g\item-card-media\latest1.jpg" />
+    <Content Include="media-g\item-card-media\latest2.jpg" />
+    <Content Include="media-g\item-card-media\lum.jpg" />
+    <Content Include="media-g\item-card-media\mate-s.jpg" />
+    <Content Include="media-g\item-card-media\mi41.jpg" />
+    <Content Include="media-g\item-card-media\mi4132g.jpg" />
+    <Content Include="media-g\item-card-media\oneplus.jpg" />
+    <Content Include="media-g\item-card-media\RoseGold.jpg" />
+    <Content Include="media-g\item-card-media\xperia.jpg" />
+    <Content Include="media-g\item-card-media\z5-prem.jpg" />
+    <Content Include="media-g\item-card-media\z5.jpg" />
+    <Content Include="media-g\item-card-media\zen.jpg" />
+    <Content Include="media-g\offers\all-menu1.jpg" />
+    <Content Include="media-g\offers\all-menu2.jpg" />
+    <Content Include="media-g\offers\category-b-side.png" />
+    <Content Include="media-g\offers\category-b1.jpg" />
+    <Content Include="media-g\offers\offers-row\2rowb-1.jpg" />
+    <Content Include="media-g\offers\offers-row\2rowb-2.jpg" />
+    <Content Include="media-g\offers\offers-row\2rowb-3.jpg" />
+    <Content Include="media-g\offers\offers-row\rowb-1.jpg" />
+    <Content Include="media-g\offers\offers-row\rowb-2.jpg" />
+    <Content Include="media-g\offers\offers-row\rowb-3.jpg" />
+    <Content Include="media-g\offers\promotion-offers\prom1-1.jpg" />
+    <Content Include="media-g\offers\promotion-offers\prom1-2.jpg" />
+    <Content Include="media-g\offers\promotion-offers\prom1-3.jpg" />
+    <Content Include="media-g\offers\promotion-offers\prom2-1.jpg" />
+    <Content Include="media-g\offers\promotion-offers\prom2-2.jpg" />
+    <Content Include="media-g\offers\promotion-offers\prom2-3.jpg" />
+    <Content Include="media-g\offers\promotion-offers\prom3-1.jpg" />
+    <Content Include="media-g\offers\promotion-offers\prom3-2.jpg" />
+    <Content Include="media-g\paycards\1.jpg" />
+    <Content Include="media-g\paycards\2.jpg" />
+    <Content Include="media-g\paycards\3.jpg" />
+    <Content Include="media-g\paycards\4.jpg" />
+    <Content Include="media-g\paycards\5.jpg" />
+    <Content Include="media-g\paycards\6.jpg" />
+    <Content Include="media-g\product-detail\1.jpg" />
+    <Content Include="media-g\product-detail\2.jpg" />
+    <Content Include="media-g\product-detail\2b.jpg" />
+    <Content Include="media-g\product-detail\3.jpg" />
+    <Content Include="media-g\product-detail\3b.jpg" />
+    <Content Include="media-g\product-detail\4.jpg" />
+    <Content Include="media-g\product-detail\4b.jpg" />
+    <Content Include="media-g\product-detail\5.jpg" />
+    <Content Include="media-g\product-detail\5b.jpg" />
+    <Content Include="media-g\slides\galaxy.png" />
+    <Content Include="media-g\slides\samsung.png" />
+    <Content Include="media-g\slides\slide_1.jpg" />
+    <Content Include="media-g\slides\slide_2.jpg" />
+    <Content Include="media-g\slides\slide_3.jpg" />
+    <Content Include="media\blog\latest-prev\prev1.jpg" />
+    <Content Include="media\blog\latest-prev\prev2.jpg" />
+    <Content Include="media\blog\latest-prev\prev3.jpg" />
+    <Content Include="media\blog\post-img-big.jpg" />
+    <Content Include="media\blog\post-img1.jpg" />
+    <Content Include="media\blog\post-img2.jpg" />
+    <Content Include="media\blog\post-prev1-home.jpg" />
+    <Content Include="media\blog\post-prev1.jpg" />
+    <Content Include="media\blog\post-prev2-home.jpg" />
+    <Content Include="media\blog\post-prev2.jpg" />
+    <Content Include="media\blog\post-prev3-home.jpg" />
+    <Content Include="media\blog\post-prev3.jpg" />
+    <Content Include="media\blog\post-prev4.jpg" />
+    <Content Include="media\blog\post-prev5.jpg" />
+    <Content Include="media\blog\userpics\user1.jpg" />
+    <Content Include="media\blog\userpics\user2.jpg" />
+    <Content Include="media\brand-logos\gone.png" />
+    <Content Include="media\brand-logos\mike.png" />
+    <Content Include="media\brand-logos\rick.png" />
+    <Content Include="media\brand-logos\roman.png" />
+    <Content Include="media\brand-logos\sa.png" />
+    <Content Include="media\brand-logos\xmob.png" />
+    <Content Include="media\cart-products\6s.jpg" />
+    <Content Include="media\cart-products\huaw.jpg" />
+    <Content Include="media\cart-products\product1.jpg" />
+    <Content Include="media\cart-products\product2.jpg" />
+    <Content Include="media\cart-products\sams.jpg" />
+    <Content Include="media\demo-page\01_home-1.jpg" />
+    <Content Include="media\demo-page\02_home-2.jpg" />
+    <Content Include="media\demo-page\03_home-3.jpg" />
+    <Content Include="media\demo-page\04_category-1-grid.jpg" />
+    <Content Include="media\demo-page\05_category-2-grid.jpg" />
+    <Content Include="media\demo-page\06_category-3-list.jpg" />
+    <Content Include="media\demo-page\07_category-4-list.jpg" />
+    <Content Include="media\demo-page\08_product-details-1.jpg" />
+    <Content Include="media\demo-page\09_product-details-2.jpg" />
+    <Content Include="media\demo-page\10_blog-main.jpg" />
+    <Content Include="media\demo-page\11_blog-post.jpg" />
+    <Content Include="media\demo-page\12_my-wishlist.jpg" />
+    <Content Include="media\demo-page\13_shopping-cart.jpg" />
+    <Content Include="media\demo-page\14_contact.jpg" />
+    <Content Include="media\demo-page\15_404.jpg" />
+    <Content Include="media\demo-page\17_typography.jpg" />
+    <Content Include="media\demo-page\documentation.jpg" />
+    <Content Include="media\demo-page\header.jpg" />
+    <Content Include="media\demo-page\mac.png" />
+    <Content Include="media\filter-smart\smart1.jpg" />
+    <Content Include="media\filter-smart\smart2.jpg" />
+    <Content Include="media\filter-smart\smart3.jpg" />
+    <Content Include="media\item-card-media\6s-plus.jpg" />
+    <Content Include="media\item-card-media\6s.jpg" />
+    <Content Include="media\item-card-media\core-prime.jpg" />
+    <Content Include="media\item-card-media\g84g.jpg" />
+    <Content Include="media\item-card-media\hot-deal-mod.png" />
+    <Content Include="media\item-card-media\hot-deal.jpg" />
+    <Content Include="media\item-card-media\huaew-mate.jpg" />
+    <Content Include="media\item-card-media\huaew-nexus.jpg" />
+    <Content Include="media\item-card-media\latest1.jpg" />
+    <Content Include="media\item-card-media\latest2.jpg" />
+    <Content Include="media\item-card-media\lum.jpg" />
+    <Content Include="media\item-card-media\mate-s.jpg" />
+    <Content Include="media\item-card-media\mi41.jpg" />
+    <Content Include="media\item-card-media\mi4132g.jpg" />
+    <Content Include="media\item-card-media\oneplus.jpg" />
+    <Content Include="media\item-card-media\RoseGold.jpg" />
+    <Content Include="media\item-card-media\xperia.jpg" />
+    <Content Include="media\item-card-media\z5-prem.jpg" />
+    <Content Include="media\item-card-media\z5.jpg" />
+    <Content Include="media\item-card-media\zen.jpg" />
+    <Content Include="media\offers\all-menu1.jpg" />
+    <Content Include="media\offers\all-menu2.jpg" />
+    <Content Include="media\offers\category-b-side.png" />
+    <Content Include="media\offers\category-b1.jpg" />
+    <Content Include="media\offers\offers-row\2rowb-1.jpg" />
+    <Content Include="media\offers\offers-row\2rowb-2.jpg" />
+    <Content Include="media\offers\offers-row\2rowb-3.jpg" />
+    <Content Include="media\offers\offers-row\rowb-1.jpg" />
+    <Content Include="media\offers\offers-row\rowb-2.jpg" />
+    <Content Include="media\offers\offers-row\rowb-3.jpg" />
+    <Content Include="media\offers\promotion-offers\prom1-1.jpg" />
+    <Content Include="media\offers\promotion-offers\prom1-2.jpg" />
+    <Content Include="media\offers\promotion-offers\prom1-3.jpg" />
+    <Content Include="media\offers\promotion-offers\prom2-1.jpg" />
+    <Content Include="media\offers\promotion-offers\prom2-2.jpg" />
+    <Content Include="media\offers\promotion-offers\prom2-3.jpg" />
+    <Content Include="media\offers\promotion-offers\prom3-1.jpg" />
+    <Content Include="media\offers\promotion-offers\prom3-2.jpg" />
+    <Content Include="media\paycards\1.jpg" />
+    <Content Include="media\paycards\2.jpg" />
+    <Content Include="media\paycards\3.jpg" />
+    <Content Include="media\paycards\4.jpg" />
+    <Content Include="media\paycards\5.jpg" />
+    <Content Include="media\paycards\6.jpg" />
+    <Content Include="media\product-detail\1.jpg" />
+    <Content Include="media\product-detail\2.jpg" />
+    <Content Include="media\product-detail\2b.jpg" />
+    <Content Include="media\product-detail\3.jpg" />
+    <Content Include="media\product-detail\3b.jpg" />
+    <Content Include="media\product-detail\4.jpg" />
+    <Content Include="media\product-detail\4b.jpg" />
+    <Content Include="media\product-detail\5.jpg" />
+    <Content Include="media\product-detail\5b.jpg" />
+    <Content Include="media\slides\banner.jpg" />
+    <Content Include="media\slides\banner1.jpeg" />
+    <Content Include="media\slides\banner2.jpg" />
+    <Content Include="media\slides\banner3.jpg" />
+    <Content Include="media\slides\banner4.png" />
+    <Content Include="media\slides\banner5.png" />
+    <Content Include="media\slides\banner6.png" />
+    <Content Include="media\slides\banner7.jpg" />
+    <Content Include="media\slides\banner8.jpg" />
+    <Content Include="media\slides\bg.jpg" />
+    <Content Include="media\slides\bg1.jpg" />
+    <Content Include="media\slides\bg2.jpg" />
+    <Content Include="media\slides\bg3.jpg" />
+    <Content Include="media\slides\center1.jpg" />
+    <Content Include="media\slides\galaxy.png" />
+    <Content Include="media\slides\samsung.png" />
+    <Content Include="media\slides\slide_1.jpg" />
+    <Content Include="media\slides\slide_2.jpg" />
+    <Content Include="media\slides\slide_3.jpg" />
+    <Content Include="BrandList.aspx" />
+    <Content Include="MyWish.aspx" />
+    <Content Include="Product-add.aspx" />
+    <Content Include="Product-Brand.aspx" />
+    <Content Include="Product-list.aspx" />
+    <Content Include="Products.aspx" />
+    <Content Include="ShoppingCart.aspx" />
+    <Content Include="static\h-ui.admin\css\H-ui.admin.css" />
+    <Content Include="static\h-ui.admin\css\H-ui.login.css" />
+    <Content Include="static\h-ui.admin\css\style.css" />
+    <Content Include="static\h-ui.admin\images\acrossTab\acrossTab-2.png" />
+    <Content Include="static\h-ui.admin\images\admin-login-bg.jpg" />
+    <Content Include="static\h-ui.admin\images\admin-loginform-bg.png" />
+    <Content Include="static\h-ui.admin\images\cn.gif" />
+    <Content Include="static\h-ui.admin\images\loading.gif" />
+    <Content Include="static\h-ui.admin\images\logo.png" />
+    <Content Include="static\h-ui.admin\images\um.gif" />
+    <Content Include="static\h-ui.admin\js\de_DE.txt" />
+    <Content Include="static\h-ui.admin\js\H-ui.admin.js" />
+    <Content Include="static\h-ui.admin\skin\blue\acrossTab-bg.png" />
+    <Content Include="static\h-ui.admin\skin\blue\acrossTab.png" />
+    <Content Include="static\h-ui.admin\skin\blue\icon_arrow.png" />
+    <Content Include="static\h-ui.admin\skin\blue\skin.css" />
+    <Content Include="static\h-ui.admin\skin\default\acrossTab-bg.png" />
+    <Content Include="static\h-ui.admin\skin\default\acrossTab.png" />
+    <Content Include="static\h-ui.admin\skin\default\icon_arrow.png" />
+    <Content Include="static\h-ui.admin\skin\default\skin.css" />
+    <Content Include="static\h-ui.admin\skin\green\acrossTab-bg.png" />
+    <Content Include="static\h-ui.admin\skin\green\acrossTab.png" />
+    <Content Include="static\h-ui.admin\skin\green\icon_arrow.png" />
+    <Content Include="static\h-ui.admin\skin\green\skin.css" />
+    <Content Include="static\h-ui.admin\skin\orange\acrossTab-bg.png" />
+    <Content Include="static\h-ui.admin\skin\orange\acrossTab.png" />
+    <Content Include="static\h-ui.admin\skin\orange\icon_arrow.png" />
+    <Content Include="static\h-ui.admin\skin\orange\skin.css" />
+    <Content Include="static\h-ui.admin\skin\red\acrossTab-bg.png" />
+    <Content Include="static\h-ui.admin\skin\red\acrossTab.png" />
+    <Content Include="static\h-ui.admin\skin\red\icon_arrow.png" />
+    <Content Include="static\h-ui.admin\skin\red\skin.css" />
+    <Content Include="static\h-ui.admin\skin\yellow\acrossTab-bg.png" />
+    <Content Include="static\h-ui.admin\skin\yellow\acrossTab.png" />
+    <Content Include="static\h-ui.admin\skin\yellow\icon_arrow.png" />
+    <Content Include="static\h-ui.admin\skin\yellow\skin.css" />
+    <Content Include="static\h-ui\css\H-ui.css" />
+    <Content Include="static\h-ui\css\H-ui.ie.css" />
+    <Content Include="static\h-ui\css\H-ui.min.css" />
+    <Content Include="static\h-ui\css\H-ui.reset.css" />
+    <Content Include="static\h-ui\images\acrossTab\acrossTab-bg.png" />
+    <Content Include="static\h-ui\images\acrossTab\acrossTab-close.png" />
+    <Content Include="static\h-ui\images\acrossTab\acrossTab.png" />
+    <Content Include="static\h-ui\images\dataTable\sort_asc.png" />
+    <Content Include="static\h-ui\images\dataTable\sort_both.png" />
+    <Content Include="static\h-ui\images\dataTable\sort_desc.png" />
+    <Content Include="static\h-ui\images\dropDown\icon-jt.png" />
+    <Content Include="static\h-ui\images\face\201.gif" />
+    <Content Include="static\h-ui\images\face\202.gif" />
+    <Content Include="static\h-ui\images\face\203.gif" />
+    <Content Include="static\h-ui\images\face\204.gif" />
+    <Content Include="static\h-ui\images\face\205.gif" />
+    <Content Include="static\h-ui\images\face\206.gif" />
+    <Content Include="static\h-ui\images\face\207.gif" />
+    <Content Include="static\h-ui\images\face\208.gif" />
+    <Content Include="static\h-ui\images\face\209.gif" />
+    <Content Include="static\h-ui\images\face\210.gif" />
+    <Content Include="static\h-ui\images\face\QQ\0.gif" />
+    <Content Include="static\h-ui\images\face\QQ\1.gif" />
+    <Content Include="static\h-ui\images\face\QQ\10.gif" />
+    <Content Include="static\h-ui\images\face\QQ\100.gif" />
+    <Content Include="static\h-ui\images\face\QQ\101.gif" />
+    <Content Include="static\h-ui\images\face\QQ\102.gif" />
+    <Content Include="static\h-ui\images\face\QQ\103.gif" />
+    <Content Include="static\h-ui\images\face\QQ\104.gif" />
+    <Content Include="static\h-ui\images\face\QQ\105.gif" />
+    <Content Include="static\h-ui\images\face\QQ\106.gif" />
+    <Content Include="static\h-ui\images\face\QQ\11.gif" />
+    <Content Include="static\h-ui\images\face\QQ\12.gif" />
+    <Content Include="static\h-ui\images\face\QQ\13.gif" />
+    <Content Include="static\h-ui\images\face\QQ\14.gif" />
+    <Content Include="static\h-ui\images\face\QQ\15.gif" />
+    <Content Include="static\h-ui\images\face\QQ\16.gif" />
+    <Content Include="static\h-ui\images\face\QQ\18.gif" />
+    <Content Include="static\h-ui\images\face\QQ\19.gif" />
+    <Content Include="static\h-ui\images\face\QQ\2.gif" />
+    <Content Include="static\h-ui\images\face\QQ\20.gif" />
+    <Content Include="static\h-ui\images\face\QQ\21.gif" />
+    <Content Include="static\h-ui\images\face\QQ\22.gif" />
+    <Content Include="static\h-ui\images\face\QQ\23.gif" />
+    <Content Include="static\h-ui\images\face\QQ\24.gif" />
+    <Content Include="static\h-ui\images\face\QQ\25.gif" />
+    <Content Include="static\h-ui\images\face\QQ\26.gif" />
+    <Content Include="static\h-ui\images\face\QQ\27.gif" />
+    <Content Include="static\h-ui\images\face\QQ\28.gif" />
+    <Content Include="static\h-ui\images\face\QQ\29.gif" />
+    <Content Include="static\h-ui\images\face\QQ\3.gif" />
+    <Content Include="static\h-ui\images\face\QQ\30.gif" />
+    <Content Include="static\h-ui\images\face\QQ\31.gif" />
+    <Content Include="static\h-ui\images\face\QQ\32.gif" />
+    <Content Include="static\h-ui\images\face\QQ\33.gif" />
+    <Content Include="static\h-ui\images\face\QQ\34.gif" />
+    <Content Include="static\h-ui\images\face\QQ\35.gif" />
+    <Content Include="static\h-ui\images\face\QQ\36.gif" />
+    <Content Include="static\h-ui\images\face\QQ\37.gif" />
+    <Content Include="static\h-ui\images\face\QQ\38.gif" />
+    <Content Include="static\h-ui\images\face\QQ\39.gif" />
+    <Content Include="static\h-ui\images\face\QQ\4.gif" />
+    <Content Include="static\h-ui\images\face\QQ\40.gif" />
+    <Content Include="static\h-ui\images\face\QQ\41.gif" />
+    <Content Include="static\h-ui\images\face\QQ\42.gif" />
+    <Content Include="static\h-ui\images\face\QQ\43.gif" />
+    <Content Include="static\h-ui\images\face\QQ\44.gif" />
+    <Content Include="static\h-ui\images\face\QQ\45.gif" />
+    <Content Include="static\h-ui\images\face\QQ\46.gif" />
+    <Content Include="static\h-ui\images\face\QQ\47.gif" />
+    <Content Include="static\h-ui\images\face\QQ\48.gif" />
+    <Content Include="static\h-ui\images\face\QQ\49.gif" />
+    <Content Include="static\h-ui\images\face\QQ\5.gif" />
+    <Content Include="static\h-ui\images\face\QQ\50.gif" />
+    <Content Include="static\h-ui\images\face\QQ\51.gif" />
+    <Content Include="static\h-ui\images\face\QQ\52.gif" />
+    <Content Include="static\h-ui\images\face\QQ\53.gif" />
+    <Content Include="static\h-ui\images\face\QQ\54.gif" />
+    <Content Include="static\h-ui\images\face\QQ\55.gif" />
+    <Content Include="static\h-ui\images\face\QQ\56.gif" />
+    <Content Include="static\h-ui\images\face\QQ\57.gif" />
+    <Content Include="static\h-ui\images\face\QQ\58.gif" />
+    <Content Include="static\h-ui\images\face\QQ\59.gif" />
+    <Content Include="static\h-ui\images\face\QQ\6.gif" />
+    <Content Include="static\h-ui\images\face\QQ\60.gif" />
+    <Content Include="static\h-ui\images\face\QQ\61.gif" />
+    <Content Include="static\h-ui\images\face\QQ\62.gif" />
+    <Content Include="static\h-ui\images\face\QQ\63.gif" />
+    <Content Include="static\h-ui\images\face\QQ\64.gif" />
+    <Content Include="static\h-ui\images\face\QQ\65.gif" />
+    <Content Include="static\h-ui\images\face\QQ\66.gif" />
+    <Content Include="static\h-ui\images\face\QQ\67.gif" />
+    <Content Include="static\h-ui\images\face\QQ\68.gif" />
+    <Content Include="static\h-ui\images\face\QQ\69.gif" />
+    <Content Include="static\h-ui\images\face\QQ\7.gif" />
+    <Content Include="static\h-ui\images\face\QQ\70.gif" />
+    <Content Include="static\h-ui\images\face\QQ\71.gif" />
+    <Content Include="static\h-ui\images\face\QQ\72.gif" />
+    <Content Include="static\h-ui\images\face\QQ\73.gif" />
+    <Content Include="static\h-ui\images\face\QQ\74.gif" />
+    <Content Include="static\h-ui\images\face\QQ\75.gif" />
+    <Content Include="static\h-ui\images\face\QQ\76.gif" />
+    <Content Include="static\h-ui\images\face\QQ\77.gif" />
+    <Content Include="static\h-ui\images\face\QQ\78.gif" />
+    <Content Include="static\h-ui\images\face\QQ\79.gif" />
+    <Content Include="static\h-ui\images\face\QQ\8.gif" />
+    <Content Include="static\h-ui\images\face\QQ\80.gif" />
+    <Content Include="static\h-ui\images\face\QQ\81.gif" />
+    <Content Include="static\h-ui\images\face\QQ\82.gif" />
+    <Content Include="static\h-ui\images\face\QQ\83.gif" />
+    <Content Include="static\h-ui\images\face\QQ\84.gif" />
+    <Content Include="static\h-ui\images\face\QQ\85.gif" />
+    <Content Include="static\h-ui\images\face\QQ\86.gif" />
+    <Content Include="static\h-ui\images\face\QQ\87.gif" />
+    <Content Include="static\h-ui\images\face\QQ\88.gif" />
+    <Content Include="static\h-ui\images\face\QQ\89.gif" />
+    <Content Include="static\h-ui\images\face\QQ\9.gif" />
+    <Content Include="static\h-ui\images\face\QQ\90.gif" />
+    <Content Include="static\h-ui\images\face\QQ\91.gif" />
+    <Content Include="static\h-ui\images\face\QQ\92.gif" />
+    <Content Include="static\h-ui\images\face\QQ\93.gif" />
+    <Content Include="static\h-ui\images\face\QQ\94.gif" />
+    <Content Include="static\h-ui\images\face\QQ\95.gif" />
+    <Content Include="static\h-ui\images\face\QQ\96.gif" />
+    <Content Include="static\h-ui\images\face\QQ\97.gif" />
+    <Content Include="static\h-ui\images\face\QQ\98.gif" />
+    <Content Include="static\h-ui\images\face\QQ\99.gif" />
+    <Content Include="static\h-ui\images\Hui-tags\empty.png" />
+    <Content Include="static\h-ui\images\iCheck\aero%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\aero.png" />
+    <Content Include="static\h-ui\images\iCheck\blue%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\blue.png" />
+    <Content Include="static\h-ui\images\iCheck\green%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\green.png" />
+    <Content Include="static\h-ui\images\iCheck\grey%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\grey.png" />
+    <Content Include="static\h-ui\images\iCheck\minimal%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\minimal.png" />
+    <Content Include="static\h-ui\images\iCheck\orange%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\orange.png" />
+    <Content Include="static\h-ui\images\iCheck\pink%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\pink.png" />
+    <Content Include="static\h-ui\images\iCheck\purple%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\purple.png" />
+    <Content Include="static\h-ui\images\iCheck\red%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\red.png" />
+    <Content Include="static\h-ui\images\iCheck\yellow%402x.png" />
+    <Content Include="static\h-ui\images\iCheck\yellow.png" />
+    <Content Include="static\h-ui\images\iconpic-arrow.png" />
+    <Content Include="static\h-ui\images\jselect\iconpic-arrow-down2.png" />
+    <Content Include="static\h-ui\images\loading\loading-b.gif" />
+    <Content Include="static\h-ui\images\loading\loading-s.gif" />
+    <Content Include="static\h-ui\images\rollpic\unslider-arrow.png" />
+    <Content Include="static\h-ui\images\star\iconpic-star-S-default.png" />
+    <Content Include="static\h-ui\images\star\iconpic-star-S.png" />
+    <Content Include="static\h-ui\images\steps\step_arrow-active.png" />
+    <Content Include="static\h-ui\images\steps\step_arrow.png" />
+    <Content Include="static\h-ui\images\steps\step_bg-active.png" />
+    <Content Include="static\h-ui\images\steps\step_bg.png" />
+    <Content Include="static\h-ui\images\ucnter\avatar-default-S.gif" />
+    <Content Include="static\h-ui\images\ucnter\avatar-default.jpg" />
+    <Content Include="static\h-ui\images\ucnter\avatar.png" />
+    <Content Include="static\h-ui\images\ucnter\noavatar_small.gif" />
+    <Content Include="static\h-ui\images\validform\iconpic-error.png" />
+    <Content Include="static\h-ui\images\validform\iconpic-right.png" />
+    <Content Include="static\h-ui\images\validform\iconpic-warning.png" />
+    <Content Include="static\h-ui\images\verticalTab\tabNav-active.png" />
+    <Content Include="static\h-ui\images\verticalTab\tabNav-hover.png" />
+    <Content Include="static\h-ui\images\verticalTab\tabNav.png" />
+    <Content Include="static\h-ui\images\verticalTab\tabNav_right-active.png" />
+    <Content Include="static\h-ui\images\verticalTab\tabNav_right-hover.png" />
+    <Content Include="static\h-ui\images\verticalTab\tabNav_right.png" />
+    <Content Include="static\h-ui\images\verticalTab\tab_bg.png" />
+    <Content Include="static\h-ui\js\H-ui.js" />
+    <Content Include="static\h-ui\js\H-ui.min.js" />
+    <Content Include="temp\200x150.jpg" />
+    <Content Include="temp\big\chai.jpg" />
+    <Content Include="temp\big\chufang.jpg" />
+    <Content Include="temp\big\keting.jpg" />
+    <Content Include="temp\big\keting2.jpg" />
+    <Content Include="temp\big\keting3.jpg" />
+    <Content Include="temp\big\keting4.jpg" />
+    <Content Include="temp\big\shouju.jpg" />
+    <Content Include="temp\big\shufang.jpg" />
+    <Content Include="temp\big\weishengjian.jpg" />
+    <Content Include="temp\big\weishengjian2.jpg" />
+    <Content Include="temp\big\woshi.jpg" />
+    <Content Include="temp\big\youyongchi.jpg" />
+    <Content Include="temp\brand\ambio.jpg" />
+    <Content Include="temp\brand\dongpeng.jpeg" />
+    <Content Include="temp\brand\shengxiang.jpg" />
+    <Content Include="temp\product\Thumb\5345.jpg" />
+    <Content Include="temp\product\Thumb\6204.jpg" />
+    <Content Include="temp\Thumb\chai.jpg" />
+    <Content Include="temp\Thumb\chufang.jpg" />
+    <Content Include="temp\Thumb\keting.jpg" />
+    <Content Include="temp\Thumb\keting2.jpg" />
+    <Content Include="temp\Thumb\keting3.jpg" />
+    <Content Include="temp\Thumb\keting4.jpg" />
+    <Content Include="temp\Thumb\shouju.jpg" />
+    <Content Include="temp\Thumb\shufang.jpg" />
+    <Content Include="temp\Thumb\weishengjian.jpg" />
+    <Content Include="temp\Thumb\weishengjian2.jpg" />
+    <Content Include="temp\Thumb\woshi.jpg" />
+    <Content Include="temp\Thumb\youyongchi.jpg" />
+    <Content Include="UserCenter.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.aspx.cs">
+      <DependentUpon>Address.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Address.aspx.designer.cs">
+      <DependentUpon>Address.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-add.aspx.cs">
+      <DependentUpon>admin-add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-add.aspx.designer.cs">
+      <DependentUpon>admin-add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\AddressHandler.ashx.cs">
+      <DependentUpon>AddressHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\OrderHandler.ashx.cs">
+      <DependentUpon>OrderHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\Products.ashx.cs">
+      <DependentUpon>Products.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\ShopCartHandler.ashx.cs">
+      <DependentUpon>ShopCartHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\SmallCartHandler.ashx.cs">
+      <DependentUpon>SmallCartHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\User.ashx.cs">
+      <DependentUpon>User.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ashx\WishHandler.ashx.cs">
+      <DependentUpon>WishHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="assess.aspx.cs">
+      <DependentUpon>assess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="assess.aspx.designer.cs">
+      <DependentUpon>assess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackOrder.aspx.cs">
+      <DependentUpon>BackOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackOrder.aspx.designer.cs">
+      <DependentUpon>BackOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePwd.aspx.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePwd.aspx.designer.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comment.aspx.cs">
+      <DependentUpon>comment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="comment.aspx.designer.cs">
+      <DependentUpon>comment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouAllOrder.aspx.cs">
+      <DependentUpon>HouAllOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HouAllOrder.aspx.designer.cs">
+      <DependentUpon>HouAllOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouFahuo.aspx.cs">
+      <DependentUpon>HouFahuo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HouFahuo.aspx.designer.cs">
+      <DependentUpon>HouFahuo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouIndex.aspx.cs">
+      <DependentUpon>HouIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HouIndex.aspx.designer.cs">
+      <DependentUpon>HouIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouOrderLoad.aspx.cs">
+      <DependentUpon>HouOrderLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HouOrderLoad.aspx.designer.cs">
+      <DependentUpon>HouOrderLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouUsers.aspx.cs">
+      <DependentUpon>HouUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HouUsers.aspx.designer.cs">
+      <DependentUpon>HouUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HouWelcome.aspx.cs">
+      <DependentUpon>HouWelcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HouWelcome.aspx.designer.cs">
+      <DependentUpon>HouWelcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information.aspx.cs">
+      <DependentUpon>Information.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information.aspx.designer.cs">
+      <DependentUpon>Information.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lib\ueditor\1.4.3\net\App_Code\Config.cs" />
+    <Compile Include="lib\ueditor\1.4.3\net\App_Code\ConfigHandler.cs" />
+    <Compile Include="lib\ueditor\1.4.3\net\App_Code\CrawlerHandler.cs" />
+    <Compile Include="lib\ueditor\1.4.3\net\App_Code\Handler.cs" />
+    <Compile Include="lib\ueditor\1.4.3\net\App_Code\ListFileHandler.cs" />
+    <Compile Include="lib\ueditor\1.4.3\net\App_Code\NotSupportedHandler.cs" />
+    <Compile Include="lib\ueditor\1.4.3\net\App_Code\PathFormater.cs" />
+    <Compile Include="lib\ueditor\1.4.3\net\App_Code\UploadHandler.cs" />
+    <Compile Include="Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BrandList.aspx.cs">
+      <DependentUpon>BrandList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrandList.aspx.designer.cs">
+      <DependentUpon>BrandList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyWish.aspx.cs">
+      <DependentUpon>MyWish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyWish.aspx.designer.cs">
+      <DependentUpon>MyWish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product-add.aspx.cs">
+      <DependentUpon>Product-add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product-add.aspx.designer.cs">
+      <DependentUpon>Product-add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product-Brand.aspx.cs">
+      <DependentUpon>Product-Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product-Brand.aspx.designer.cs">
+      <DependentUpon>Product-Brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product-list.aspx.cs">
+      <DependentUpon>Product-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product-list.aspx.designer.cs">
+      <DependentUpon>Product-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ashx\RegHandler.ashx.cs">
+      <DependentUpon>RegHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Son.master.cs">
+      <DependentUpon>Son.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Son.master.designer.cs">
+      <DependentUpon>Son.master</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="UserCenter.aspx.cs">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter.aspx.designer.cs">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\elegant_font\ElegantIcons.eot" />
+    <Content Include="fonts\elegant_font\ElegantIcons.ttf" />
+    <Content Include="fonts\elegant_font\ElegantIcons.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Main.Master" />
+    <Content Include="ashx\RegHandler.ashx" />
+    <Content Include="ashx\ShopCartHandler.ashx" />
+    <Content Include="ashx\SmallCartHandler.ashx" />
+    <Content Include="ashx\WishHandler.ashx" />
+    <Content Include="Son.master" />
+    <Content Include="ashx\User.ashx" />
+    <Content Include="ashx\AddressHandler.ashx" />
+    <Content Include="lib\hcharts\Highcharts\5.0.6\license.pdf" />
+    <Content Include="lib\Hui-iconfont\1.0.8\iconfont.eot" />
+    <Content Include="lib\Hui-iconfont\1.0.8\iconfont.ttf" />
+    <Content Include="lib\Hui-iconfont\1.0.8\iconfont.woff" />
+    <Content Include="lib\lightbox2\2.8.1\js\lightbox-plus-jquery.min.map" />
+    <Content Include="lib\lightbox2\2.8.1\js\lightbox.min.map" />
+    <Content Include="lib\ueditor\1.4.3\net\config.json" />
+    <Content Include="lib\ueditor\1.4.3\net\controller.ashx" />
+    <Content Include="lib\ueditor\1.4.3\net\README.md" />
+    <Content Include="lib\ueditor\1.4.3\net\Web.config" />
+    <Content Include="lib\ueditor\1.4.3\third-party\jquery-1.10.2.min.map" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\font\vjs.eot" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\font\vjs.ttf" />
+    <Content Include="lib\ueditor\1.4.3\third-party\video-js\font\vjs.woff" />
+    <Content Include="lib\webuploader\0.1.5\images\icons.psd" />
+    <Content Include="lib\webuploader\0.1.5\images\progress.psd" />
+    <Content Include="lib\webuploader\0.1.5\images\Thumbs.db" />
+    <Content Include="lib\webuploader\0.1.5\README.md" />
+    <Content Include="lib\webuploader\0.1.5\server\fileupload.php" />
+    <Content Include="lib\webuploader\0.1.5\server\fileupload2.php" />
+    <Content Include="lib\webuploader\0.1.5\server\preview.php" />
+    <Content Include="lib\zTree\v3\css\zTreeStyle\img\Thumbs.db" />
+    <Content Include="static\h-ui.admin\skin\blue\Thumbs.db" />
+    <Content Include="static\h-ui.admin\skin\default\Thumbs.db" />
+    <Content Include="static\h-ui.admin\skin\green\Thumbs.db" />
+    <Content Include="static\h-ui.admin\skin\orange\Thumbs.db" />
+    <Content Include="static\h-ui.admin\skin\red\Thumbs.db" />
+    <Content Include="static\h-ui.admin\skin\yellow\Thumbs.db" />
+    <Content Include="static\h-ui\images\face\Thumbs.db" />
+    <Content Include="static\h-ui\images\iCheck\Thumbs.db" />
+    <Content Include="static\h-ui\images\ucnter\Thumbs.db" />
+    <Content Include="temp\big\Thumbs.db" />
+    <Content Include="temp\brand\Thumbs.db" />
+    <Content Include="temp\Thumbs.db" />
+    <Content Include="temp\Thumb\Thumbs.db" />
+    <Content Include="ashx\OrderHandler.ashx" />
+    <Content Include="ashx\Products.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Bll\Bll.csproj">
+      <Project>{8dd58f42-74ca-44be-a340-4d66650a2af8}</Project>
+      <Name>Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="Common\Common.csproj">
+      <Project>{c429768d-6b53-417c-9c7b-0629ec1423c9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59123</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59123/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

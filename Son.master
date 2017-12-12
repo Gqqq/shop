@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Son.master.cs" Inherits="Shop.Son" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="b-page-header">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-sm-12 clearfix">
+				    <h3 class="page-title pull-left" style="font-size:20px;"><%=Url %></h3>
+				    <div class="b-breadcrumbs pull-right">
+					    <ul class="list-unstyled">
+						    <li>
+							    <a href="index.aspx">首页</a>
+						    </li>
+						    <li>
+							    <span><%=Url %></span>
+						    </li>
+					    </ul>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+    <div class="center" style="margin-bottom:20px;">
+        <div class="col-main">
+		    <div class="main-wrap">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+                </asp:ContentPlaceHolder>
+            </div>		
+        </div>
+	    <aside class="menu" id="menu" style="display: block;">
+		    <ul>
+			   <%-- <li class="person">
+                    <ul>
+                        <li><a href="UserCenter.aspx">用户中心</a></li>
+                    </ul>
+			    </li>--%>
+			    <li class="person">
+				    <a href="#">个人资料</a>
+				    <ul>
+					    <li> <a href="Information.aspx">个人信息</a></li>
+					    <li> <a href="ChangePwd.aspx">修改密码</a></li>
+					    <li> <a href="Address.aspx">收货地址</a></li>
+				    </ul>
+			    </li>
+			    <li class="person">
+				    <a href="#">我的交易</a>
+				    <ul>
+					    <li><a href="BackOrder.aspx">订单管理</a></li>
+                        <li> <a href="comment.aspx">评价</a></li>
+					   <%-- <li> <a href="#">退款售后</a></li>--%>
+				    </ul>
+			    </li>
+			    <%--<li class="person">
+				    <a href="#">我的资产</a>
+				    <ul>
+					    <li> <a href="#">优惠券 </a></li>
+					    <li> <a href="#">红包</a></li>
+					    <li> <a href="#">账单明细</a></li>
+				    </ul>
+			    </li>--%>
+
+			    <%--<li class="person">
+				    <a href="#">我的小窝</a>
+				    <ul>
+					    <li> <a href="MyWish.aspx">收藏</a></li>
+					    <li> <a href="#">足迹</a></li>
+					    <li> <a href="#">评价</a></li>
+					    <li> <a href="#">消息</a></li>
+				    </ul>
+			    </li>--%>
+		    </ul>
+	    </aside>
+    </div>
+    <script>
+        var url = window.location.pathname;
+        var path = url.substring(1);
+        var aa=  document.getElementsByTagName("a");
+        for (var i = 0; i < aa.length; i++) {
+            var href = aa[i].href;
+            var pathname = href.substring(href.lastIndexOf('/')+1);
+            if (pathname == path) {
+                aa[i].parentElement.className='active'
+            }
+        }
+    </script>
+    <script src="js/jquery.min (3).js" type="text/javascript"></script>
+    <script src="js/amazeui.js" type="text/javascript"></script>
+</asp:Content>

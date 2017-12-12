@@ -1,0 +1,436 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Shop.Main" %>
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>商城</title>
+        <script src="js/jquery-1.11.2.min.js"></script>
+		<link href="css/master.css" rel="stylesheet">
+		<!-- SWITCHER -->
+		<link rel="stylesheet" id="switcher-css" type="text/css" href="assets/switcher/css/switcher.css" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color1.css" title="color1" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color2.css" title="color2" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color3.css" title="color3" media="all" />
+		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/color4.css" title="color4" media="all" />
+
+        <link href="css/admin.css" rel="stylesheet" type="text/css">
+		<link href="css/amazeui.css" rel="stylesheet" type="text/css">
+
+        <!--用户中心样式-->
+        <link href="css/personal.css" rel="stylesheet" type="text/css">
+		<link href="css/stepstyle.css" rel="stylesheet" type="text/css">
+        <link href="css/systyle.css" rel="stylesheet" type="text/css">
+        <link href="../css/addstyle.css" rel="stylesheet" type="text/css">
+
+		<link href="/css/orstyle.css" rel="stylesheet" type="text/css">
+        
+	</head>
+	<body> 
+        <script src="js/ShoppingCartJavaScript.js"></script>
+		<!-- Loader -->
+		<%--<div id="page-preloader"><span class="spinner"></span></div>--%>
+		<!-- Loader end -->
+		<div class="b-page">
+			<!-- Start Switcher -->
+			<div class="switcher-wrapper">
+				<div class="demo_changer">
+					<div class="demo-icon customBgColor">
+						<i class="fa fa-cog fa-spin fa-2x"></i>
+					</div>
+					<div class="form_holder">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="predefined_styles">
+									<div class="skin-theme-switcher">
+										<h4>主题</h4>
+										<a href="#" data-switchcolor="color1" class="styleswitch" style="background-color:#e24545;"> </a>
+										<a href="#" data-switchcolor="color2" class="styleswitch" style="background-color:#0072bc;"> </a>
+										<a href="#" data-switchcolor="color3" class="styleswitch" style="background-color:#ff9600;"> </a>
+										<a href="#" data-switchcolor="color4" class="styleswitch" style="background-color:#01a664;"> </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Switcher -->
+			<header>
+				<div class="b-top-line style-2">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 clearfix">
+								<div class="b-top-options pull-left">
+									<div class="nav">
+										<ul class="list-inline">
+											<li class="dropdown">
+												<div class="btn-group" >
+													<button class="dropdown-toggle" data-toggle="dropdown">
+														<span><%=usersinfo %></span>
+                                                        <i class="fa fa-angle-down"></i>
+													</button>
+													<ul class="dropdown-menu dropdown-menu-right" id="userinfo" runat="server">
+                                                        <%=login %>
+                                                        <%=con %>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="b-top-info pull-right">
+									<div class="nav">
+										<ul class="list-inline">
+											<li>
+												<span><i class="fa fa-phone"></i> 0376-8471119</span>
+											</li>
+											<li>
+												<span><i class="fa fa-envelope-o"></i>1255693542@qq.com</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-header-main">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+								<div class="b-logo">
+									<a href="index.aspx">
+										<span style="font-size:40px">韩都衣舍</span>
+										<br>
+										<span>store</span>
+									</a>
+								</div>
+							</div>
+							<div id="toggle-nav" class="col-xs-12 col-sm-10 col-md-8 col-lg-8 menu-wrapper clearfix">
+								<div class="toggle-nav-btn">
+									<button class="btn btn-menu"><i class="fa fa-bars fa-lg"></i></button>
+								</div>
+								<div class="b-header-menu pull-right">
+									<ul class="list-inline" id="BrandList" runat="server">
+										<li>
+											<a class="heading-line" href="index.aspx">首页</a>
+										</li>
+										
+									</ul>
+								</div>
+							</div>
+                            <%=smallCart %>
+						</div>
+					</div>
+				</div>
+			</header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+            </asp:ContentPlaceHolder>
+             <footer class="style-2">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-3">
+							<div class="b-logo">
+								<a href="#">
+									<span>韩都衣舍</span>
+									<br>
+									<span>store</span>
+								</a>
+							</div>
+							<div class="b-footer-contacts wow pulse nimated">
+								<div class="footer-contacts-info">
+									<p style="text-indent:2em">
+										韩都衣舍，专业的服装商城，本商城致力于
+                                        推荐最时尚的服装、推出最优惠的价格、提供
+                                        最体贴的服务。让您的购物之路放心无忧。
+									</p>
+								</div>
+								<div class="footer-contacts-list">
+									<ul class="list-unstyled">
+										<li>
+											<i class="fa fa-map-pin fa-fw"></i>
+											<span>河南省信阳市信阳职业技术学院</span>
+										</li>
+										<li>
+											<i class="fa fa-phone fa-fw"></i>
+											<span>+（86） 15537673169</span>
+										</li>
+										<li>
+											<i class="fa fa-envelope-o fa-fw"></i>
+											<span>1255693542@qq.com</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-9">
+							<div class="row">
+								<div class="b-footer-menu clearfix">
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="footer-menu-item wow pulse nimated">
+											<div class="heading-line">商店链接</div>
+											<ul class="list-unstyled">
+												<li><a href="#">所有品牌</a></li>
+												<li><a href="#">最新上市</a></li>
+												<li><a href="#">畅销商品</a></li>
+												<li><a href="#">配送信息</a></li>
+												<li><a href="#">购物须知</a></li>
+												<li><a href="#">联系我们</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="footer-menu-item wow pulse nimated">
+											<div class="heading-line">公司品牌</div>
+											<ul class="list-unstyled">
+												<li><a href="BrandList.aspx?brand=Adidas">阿迪达斯</a></li>
+												<li><a href="BrandList.aspx?brand=Chanel">香奈尔</a></li>
+												<li><a href="BrandList.aspx?brand=Semir">森马</a></li>
+												<li><a href="BrandList.aspx?brand=Hla">海澜之家</a></li>
+												<li><a href="BrandList.aspx?brand=Inman">茵曼</a></li>
+												<li><a href="BrandList.aspx?brand=Septwolves">七匹狼</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="clearfix visible-xs-block"></div>
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="footer-menu-item wow pulse nimated">
+											<div class="heading-line">信息资料</div>
+											<ul class="list-unstyled">
+												<li><a href="#">我的账户</a></li>
+												<li><a href="ShoppingCart.aspx">我的购物车</a></li>
+												<li><a href="MyWish.aspx">我的收藏</a></li>
+												<li><a href="#">帮助中心</a></li>
+												<li><a href="#">返回与保修</a></li>
+												<li><a href="BackOrder.aspx">订单记录</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="b-latest-tweets wow pulse nimated">
+											<div class="heading-line">最新消息</div>
+											<div class="tweet-item">
+												<p>
+													Android in December: Marshmallow is
+													on 0.5% of devices, Lollipop reaches
+													29.5% <a href="#">http://bit.ly/1PWrFhy</a>
+												</p>
+											</div>
+											<div class="tweet-item">
+												<p>
+													Apple planning March event for new
+													Apple Watch and 4 inch iPhone: Apple
+													is planning to hold an ev… <a href="#">http://bit.ly/1TZL7bB</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="b-footer-subsc">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="subsc-title wow pulse nimated">
+											<p>
+												韩都衣舍是易购（河南）科技有限公
+                                                司倾力打造的大型网络购物平台。
+											</p>
+										</div>
+									</div>
+									<div class="col-sm-9 col-lg-5">
+										<div class="subsc-mail wow pulse nimated">
+											<form id="comment-reply-form" class="b-form" method="get" action="#">
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-12">
+															<input type="text" class="form-control" id="form-mail" placeholder="请输入您的邮箱地址 ...">
+															<button type="button" class="btn btn-subsc"><i class="fa fa-envelope-o fa-fw"></i></button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="col-sm-12 col-lg-4 clearfix">
+										<div class="footer-socials wow pulse nimated">
+											<div class="b-socials clearfix">
+												<ul class="list-unstyled">
+													<li><a href=""><i class="fa fa-twitter fa-fw"></i></a></li>
+													<li><a href=""><i class="fa fa-facebook fa-fw"></i></a></li>
+													<li><a href=""><i class="fa fa-linkedin fa-fw"></i></a></li>
+													<li><a href=""><i class="fa fa-google-plus fa-fw"></i></a></li>
+													<li><a href=""><i class="fa fa-pinterest-p fa-fw"></i></a></li>
+													<li><a href=""><i class="fa fa-youtube-play fa-fw"></i></a></li>
+													<li><a href="#"><i class="fa fa-rss fa-fw"></i></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<%--<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-3">
+							<div class="b-logo">
+								<a href="index.aspx">
+									<span>iSmile</span>
+									<br>
+									<span>store</span>
+								</a>
+							</div>
+							<div class="b-footer-contacts wow pulse nimated">
+								<div class="footer-contacts-info">
+									<p>
+										Lorem ipsum dolor sit amet consecteta adipis
+										cing elit sed do leusmod tempor incididunt ut
+										ard sed ipsum labore dolore.
+									</p>
+								</div>
+								<div class="footer-contacts-list">
+									<ul class="list-unstyled">
+										<li>
+											<i class="fa fa-map-pin fa-fw"></i>
+											<span>121 King Street, Melbourne,
+												Victoria, 3000 AU</span>
+										</li>
+										<li>
+											<i class="fa fa-phone fa-fw"></i>
+											<span>+ 123 456 7890</span>
+										</li>
+										<li>
+											<i class="fa fa-envelope-o fa-fw"></i>
+											<span>order@ismilestore.net</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-9">
+							<div class="row">
+								<div class="b-footer-menu clearfix">
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="footer-menu-item wow pulse nimated">
+											<div class="heading-line">Store links</div>
+											<ul class="list-unstyled">
+												<li><a href="#">All Brands</a></li>
+												<li><a href="#">Latest Smartphones</a></li>
+												<li><a href="#">Best Sellers</a></li>
+												<li><a href="#">Advertise With us</a></li>
+												<li><a href="#">Delivery Information</a></li>
+												<li><a href="#">Terms & Conditions</a></li>
+												<li><a href="#">Contact us</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="footer-menu-item wow pulse nimated">
+											<div class="heading-line">our Brands</div>
+											<ul class="list-unstyled">
+												<li><a href="#">Samsung</a></li>
+												<li><a href="#">Nokia</a></li>
+												<li><a href="#">LG</a></li>
+												<li><a href="#">Apple</a></li>
+												<li><a href="#">Sony</a></li>
+												<li><a href="#">Microsoft</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="clearfix visible-xs-block"></div>
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="footer-menu-item wow pulse nimated">
+											<div class="heading-line">information</div>
+											<ul class="list-unstyled">
+												<li><a href="#">My Account</a></li>
+												<li><a href="#">My Shopping Cart</a></li>
+												<li><a href="#">My Wishlist</a></li>
+												<li><a href="#">Help Center</a></li>
+												<li><a href="#">Returns & Warrenty</a></li>
+												<li><a href="#">Order History</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+										<div class="b-latest-tweets wow pulse nimated">
+											<div class="heading-line">latest tweets</div>
+											<div class="tweet-item">
+												<p>
+													Android in December: Marshmallow is
+													on 0.5% of devices, Lollipop reaches
+													29.5% <a href="#">http://bit.ly/1PWrFhy</a>
+												</p>
+											</div>
+											<div class="tweet-item">
+												<p>
+													Apple planning March event for new
+													Apple Watch and 4 inch iPhone: Apple
+													is planning to hold an ev… <a href="#">http://bit.ly/1TZL7bB</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-footer-add">
+					<div class="container">
+						<div class="row">
+							<p style="text-align:center">
+								Copyright &copy; 2016.Company name All rights reserved.<%--<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>--%>
+		</div>
+		<script src="js/bootstrap.min.js"></script>
+
+		<script src="assets/switcher/js/dmss.js"></script>
+
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/wow.min.js"></script>
+
+		<!--bootstrap-select -->
+		<script src="assets/bootstrap-select/bootstrap-select.min.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- Countdown Timer -->
+		<script src="assets/countdown/dscountdown.min.js"></script>
+
+		<!--Owl Carousel-->
+		<script src="assets/owl-carousel/owl.carousel.min.js"></script>
+
+		<!--bx slider-->
+		<script src="assets/bxslider/jquery.bxslider.min.js"></script>
+
+		<!-- slider-pro-master -->
+		<script src="assets/slider-pro-master/js/jquery.sliderPro.min.js"></script>
+
+		<script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/jquery.easypiechart.min.js"></script>
+		<script src="js/jquery.spinner.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/jquery.placeholder.min.js"></script>
+		<script src="js/theme.js"></script>
+        
+	</body>
+</html>
